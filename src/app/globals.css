@@ -8,7 +8,6 @@
   font-display: swap;
 }
 
-@custom-variant dark (&:is(.dark *));
 
 @theme {
 	--color-border: hsl(var(--border));
@@ -69,10 +68,10 @@
 @utility container {
 	margin-inline: auto;
 	padding-inline: 2rem;
-	@media (width >= --theme(--breakpoint-xs)) {
+	@media (min-width: 400px) {
 		max-width: none;
 	}
-	@media (width >= 1400px) {
+	@media (min-width: 1400px) {
 		max-width: 1400px;
 	}
 }
@@ -198,7 +197,7 @@ label:has([required]) > span:first-child {
 	animation: slideUp 250ms ease-in-out;
 }
 
-input[type="search" i]::-webkit-search-cancel-button {
+input[type="search"]::-webkit-search-cancel-button {
 	display: none;
 }
 
