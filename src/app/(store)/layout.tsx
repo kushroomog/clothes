@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import * as Commerce from "commerce-kit";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { CartModalProvider } from "@/context/cart-modal";
+import { FontProvider } from "@/components/font-provider";
 import { Footer } from "@/ui/footer/footer";
 import { accountToWebsiteJsonLd, JsonLd } from "@/ui/json-ld";
 import { Nav } from "@/ui/nav/nav";
@@ -20,11 +21,7 @@ export default async function StoreLayout({
 
 	return (
 		<>
-			<style jsx global>{`
-				:root {
-					--font-pixoreto: "PixoRetoSP", sans-serif;
-				}
-			`}</style>
+			<FontProvider />
 			<CartModalProvider>
 				<Nav />
 				<TooltipProvider>
