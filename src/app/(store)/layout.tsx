@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import { Metadata } from "next";
 import * as Commerce from "commerce-kit";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { CartModalProvider } from "@/context/cart-modal";
@@ -19,6 +20,11 @@ export default async function StoreLayout({
 
 	return (
 		<>
+			<style jsx global>{`
+				:root {
+					--font-pixoreto: "PixoRetoSP", sans-serif;
+				}
+			`}</style>
 			<CartModalProvider>
 				<Nav />
 				<TooltipProvider>
