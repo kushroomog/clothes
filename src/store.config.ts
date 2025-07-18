@@ -1,4 +1,4 @@
-import AcessoriosImg from "@/images/acessorios.png";
+// import AcessoriosImg from "@/images/acessorios.png";
 import CamisetasImg from "@/images/camisetas.png";
 
 export const config = {
