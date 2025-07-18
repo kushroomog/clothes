@@ -1,13 +1,14 @@
-import AccessoriesImage from "@/images/accessories.jpg";
-import ApparelImage from "@/images/apparel.jpg";
+import AcessoriosImg from "@/images/acessorios.png";
+import CamisetasImg from "@/images/camisetas.png";
 
 export const config = {
 	categories: [
-		{ name: "Apparel", slug: "apparel", image: ApparelImage },
-		{ name: "Accessories", slug: "accessories", image: AccessoriesImage },
+		{ name: "Camisetas", slug: "Camisetas", image: CamisetasImg },
+		// { name: "Acessórios", slug: "Acessórios", image: AcessoriosImg },
 	],
 
 	social: {
+		instagram: "https://instagram.com/kushroomog",
 		x: "https://x.com/yourstore",
 		facebook: "https://facebook.com/yourstore",
 	},

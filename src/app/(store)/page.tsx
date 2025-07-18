@@ -3,6 +3,7 @@ import Image from "next/image";
 import type { Metadata } from "next/types";
 import { publicUrl } from "@/env.mjs";
 import { getTranslations } from "@/i18n/server";
+import HomeImage from "@/images/home.jpg";
 import StoreConfig from "@/store.config";
 import { CategoryBox } from "@/ui/category-box";
 import { ProductList } from "@/ui/products/product-list";
@@ -37,7 +38,7 @@ export default async function Home() {
 						className="rounded"
 						height={450}
 						width={450}
-						src="https://files.stripe.com/links/MDB8YWNjdF8xT3BaeG5GSmNWbVh6bURsfGZsX3Rlc3RfaDVvWXowdU9ZbWlobUIyaHpNc1hCeDM200NBzvUjqP"
+						src={HomeImage}
 						style={{
 							objectFit: "cover",
 						}}
