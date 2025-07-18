@@ -1,9 +1,8 @@
 import "@/app/globals.css";
-import { Metadata } from "next";
 import * as Commerce from "commerce-kit";
+import { FontProvider } from "@/components/font-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { CartModalProvider } from "@/context/cart-modal";
-import { FontProvider } from "@/components/font-provider";
 import { Footer } from "@/ui/footer/footer";
 import { accountToWebsiteJsonLd, JsonLd } from "@/ui/json-ld";
 import { Nav } from "@/ui/nav/nav";
