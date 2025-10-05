@@ -17,12 +17,37 @@ export default async function Home() {
 	const products = await Commerce.productBrowse({ first: 6 });
 	const t = await getTranslations("/");
 
+	const announcement = {
+		title: t("announcement.title"),
+		description: t("announcement.description"),
+		cta: t("announcement.cta"),
+	};
+
 	return (
 		<main>
+			<section className="mb-6 rounded-3xl border border-neutral-200 bg-neutral-100/80 px-6 py-6 shadow-xs transition-shadow hover:shadow-sm md:px-10 md:py-8">
+				<div className="flex flex-col gap-4 text-center md:flex-row md:items-center md:justify-between md:text-left">
+					<div className="space-y-2">
+						<p className="text-sm font-medium uppercase tracking-[0.3em] text-neutral-500">
+							{announcement.title}
+						</p>
+						<p className="text-pretty text-base text-neutral-700 md:text-lg">{announcement.description}</p>
+					</div>
+					<YnsLink
+						className="inline-flex items-center justify-center rounded-full bg-neutral-900 px-5 py-3 text-sm font-semibold text-neutral-50 transition-colors hover:bg-neutral-900/90"
+						href="/venda-inaugural-kushroom"
+					>
+						{announcement.cta}
+					</YnsLink>
+				</div>
+			</section>
 			<section className="rounded bg-neutral-100 py-8 sm:py-12">
 				<div className="mx-auto grid grid-cols-1 items-center justify-items-center gap-8 px-8 sm:px-16 md:grid-cols-2">
 					<div className="max-w-md space-y-4">
-						<h2 className="text-balance text-3xl font-bold tracking-tight md:text-4xl" style={{ fontFamily: "var(--font-pixoreto)" }}>
+						<h2
+							className="text-balance text-3xl font-bold tracking-tight md:text-4xl"
+							style={{ fontFamily: "var(--font-pixoreto)" }}
+						>
 							{t("hero.title")}
 						</h2>
 						<p className="text-pretty text-neutral-600">{t("hero.description")}</p>

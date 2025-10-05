@@ -19,14 +19,14 @@ const sections = [
 				label: "Quem Somos",
 				href: "https://kushroom.site",
 			},
-			{
-				label: "Frete",
-				href: "https://yournextstore.com/#pricing",
-			},
-			{
-				label: "SAC",
-				href: "mailto:hi@yournextstore.com",
-			},
+			// {
+			// 	label: "Frete",
+			// 	href: "https://yournextstore.com/#pricing",
+			// },
+			// {
+			// 	label: "SAC",
+			// 	href: "mailto:hi@yournextstore.com",
+			// },
 		],
 	},
 ];
