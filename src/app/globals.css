@@ -1,13 +1,12 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "PixoRetoSP";
-  src: url("/fonts/PixoRetoSP-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+	font-family: "PixoRetoSP";
+	src: url("/fonts/PixoRetoSP-Regular.otf") format("opentype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
-
 
 @theme {
 	--color-border: hsl(var(--border));

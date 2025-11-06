@@ -72,16 +72,16 @@ export function KushroomLandingContent() {
 						transition={{ duration: 0.7 }}
 						className="inline-flex items-center gap-2 rounded-full border border-neutral-700 bg-neutral-900/40 px-4 py-2 text-sm font-medium uppercase tracking-[0.35em] text-neutral-300"
 					>
-						Venda Inaugural Kushroom
+						Drop inaugural Kushroom
 					</motion.span>
 					<motion.h1
 						variants={fadeUp}
 						initial="hidden"
 						animate="visible"
 						transition={{ duration: 0.8, delay: 0.15 }}
-						className="mt-8 text-balance text-5xl font-bold tracking-tight md:text-7xl"
+						className="mt-8 text-balance text-5xl font-[var(--font-pixoreto)] tracking-tight md:text-7xl"
 					>
-						O primeiro drop para quem vive a rua
+						O primeiro drop pra quem vive a rua
 					</motion.h1>
 					<motion.p
 						variants={fadeUp}
@@ -90,8 +90,8 @@ export function KushroomLandingContent() {
 						transition={{ duration: 0.8, delay: 0.35 }}
 						className="mt-6 max-w-2xl text-pretty text-lg text-neutral-300 md:text-xl"
 					>
-						Camisetas manifesto em algodão 100%, silk screen artesanal e assinatura independente. Drop
-						limitado para celebrar o primeiro ciclo da Kushroom Clothing.
+						Camiseta-manifesto em 100% algodão, silk screen artesanal e assinatura independente. Edição
+						limitada que celebra o começo da Kushroom Clothing.
 					</motion.p>
 					<motion.div
 						variants={fadeUp}
@@ -100,26 +100,27 @@ export function KushroomLandingContent() {
 						transition={{ duration: 0.8, delay: 0.5 }}
 						className="mt-12 flex flex-wrap items-center justify-center gap-6"
 					>
-						<Button
-							asChild
-							className="rounded-2xl border-0 bg-red-600 px-8 py-4 text-lg font-semibold tracking-tight text-neutral-100 shadow-xl shadow-red-900/40 transition-transform duration-300 hover:-translate-y-0.5 hover:bg-red-700"
-						>
-							<Link href="/products">Garanta a sua</Link>
-						</Button>
-						<Button
-							variant="ghost"
-							asChild
-							className="rounded-2xl border border-neutral-700/70 px-7 py-4 text-lg font-semibold text-neutral-200 transition-all hover:bg-neutral-900/60"
-						>
-							<Link href="#processo">Conheça o processo</Link>
-						</Button>
+						<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
+							<Button
+								asChild
+								className="rounded-2xl border-0 bg-orange-600 px-8 py-4 text-lg font-semibold tracking-tight text-neutral-100 shadow-xl shadow-orange-900/40 transition-transform duration-300 hover:-translate-y-0.5 hover:bg-orange-700"
+							>
+								<Link href="/products">Garanta a sua</Link>
+							</Button>
+						</motion.div>
+						<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
+							<Button
+								variant="ghost"
+								asChild
+								className="rounded-2xl border border-neutral-700/70 px-7 py-4 text-lg font-semibold text-neutral-200 transition-all hover:bg-neutral-900/60"
+							>
+								<Link href="#sobre">Ver processo</Link>
+							</Button>
+						</motion.div>
 					</motion.div>
 				</section>
 
-				<section
-					className="relative z-10 space-y-10 bg-neutral-950/60 px-6 py-24 text-center backdrop-blur-sm"
-					id="sobre"
-				>
+				<section className="relative z-10 space-y-10 px-6 py-24 text-center backdrop-blur-sm" id="sobre">
 					<div className="mx-auto flex max-w-4xl flex-col gap-8">
 						<motion.h2
 							variants={fadeUp}
@@ -139,11 +140,11 @@ export function KushroomLandingContent() {
 							transition={{ duration: 0.8, delay: 0.2 }}
 							className="mx-auto max-w-3xl text-pretty text-neutral-300"
 						>
-							Nascemos para vestir a energia da rua com respeito a quem constrói cultura todos os dias. Cada
-							peça é tirada em silk artesanal, passada no brilho da resistência e numerada para marcar o
-							início da era Kushroom.
+							Nascemos pra vestir a energia da rua e respeitar quem constrói cultura todo dia. Cada peça é
+							tirada em silk artesanal, numerada à mão e feita para durar — do corte ao acabamento.
 						</motion.p>
 					</div>
+
 					<div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-3">
 						{highlightItems.map((item, index) => (
 							<motion.div
@@ -197,30 +198,6 @@ export function KushroomLandingContent() {
 				</div>
 			</section>
 
-			<section className="bg-neutral-900 px-6 py-24 text-center" id="processo">
-				<motion.h3
-					variants={fadeUp}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true, amount: 0.4 }}
-					transition={{ duration: 0.8 }}
-					className="text-2xl font-semibold md:text-4xl"
-				>
-					Processo e cultura
-				</motion.h3>
-				<motion.p
-					variants={fadeUp}
-					initial="hidden"
-					whileInView="visible"
-					viewport={{ once: true, amount: 0.4 }}
-					transition={{ duration: 0.8, delay: 0.2 }}
-					className="mx-auto mt-4 max-w-2xl text-neutral-300"
-				>
-					Do corte ao silk, tudo nasce no corre independente. Cada etapa é conduzida com a mesma energia que
-					veste quem vive a rua todos os dias.
-				</motion.p>
-			</section>
-
 			<section className="px-6 py-24 text-center">
 				<motion.h2
 					variants={fadeUp}
@@ -240,19 +217,23 @@ export function KushroomLandingContent() {
 					transition={{ duration: 0.8, delay: 0.2 }}
 					className="mt-12 flex flex-wrap items-center justify-center gap-6"
 				>
-					<Button
-						asChild
-						className="rounded-2xl border-0 bg-red-600 px-8 py-4 text-lg font-semibold tracking-tight text-neutral-100 shadow-xl shadow-red-900/40 transition-transform duration-300 hover:-translate-y-0.5 hover:bg-red-700"
-					>
-						<Link href="/products">Comprar agora</Link>
-					</Button>
-					<Button
-						variant="outline"
-						asChild
-						className="rounded-2xl border border-neutral-700/70 bg-transparent px-7 py-4 text-lg font-semibold text-neutral-200 transition-colors hover:bg-neutral-900/60"
-					>
-						<Link href="/search">Conheça a coleção</Link>
-					</Button>
+					<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
+						<Button
+							asChild
+							className="rounded-2xl border-0 bg-orange-600 px-8 py-4 text-lg font-semibold tracking-tight text-neutral-100 shadow-xl shadow-orange-900/40 transition-transform duration-300 hover:-translate-y-0.5 hover:bg-orange-700"
+						>
+							<Link href="/products">Comprar agora</Link>
+						</Button>
+					</motion.div>
+					<motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
+						<Button
+							variant="outline"
+							asChild
+							className="rounded-2xl border border-neutral-700/70 bg-transparent px-7 py-4 text-lg font-semibold text-neutral-200 transition-colors hover:bg-neutral-900/60"
+						>
+							<Link href="/search">Conheça a coleção</Link>
+						</Button>
+					</motion.div>
 				</motion.div>
 			</section>
 		</div>
