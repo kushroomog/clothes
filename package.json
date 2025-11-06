@@ -6,9 +6,9 @@
 	"private": true,
 	"type": "module",
 	"scripts": {
-		"dev": "next dev --turbo",
-		"build": "next build",
-		"start": "next start",
+		"dev": "bun dev --turbo",
+		"build": "bun build",
+		"start": "bun start",
 		"lint": "biome check --write",
 		"test": "vitest",
 		"prepare": "bun husky",
